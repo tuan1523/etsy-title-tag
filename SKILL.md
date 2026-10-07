@@ -96,7 +96,23 @@ Loại ngay các từ khóa:
 - **Màu phôi**, trừ khi người dùng xác nhận sản phẩm chỉ có một màu.
 
 ### Bước 3b – Chấm điểm bằng YTrends (nếu có công cụ YTrends)
-Với mỗi từ khóa ứng viên đã qua bước 3a, gọi `ytrends_research_keyword` (dạng concise, `ltype` phù hợp). Nếu gặp lỗi mạng (`retryable: true`), thử lại một lần. So sánh các chỉ số:
+Với mỗi từ khóa ứng viên đã qua bước 3a, gọi `ytrends_research_keyword` (dạng concise, `ltype` phù hợp). Nếu gặp lỗi mạng (`retryable: true`), thử lại một lần.
+
+**Tra theo đợt để nhanh mà không mất độ chính xác:**
+- Chờ YTrends chiếm phần lớn thời gian chạy skill, và mỗi đợt gọi phải chờ lệnh chậm nhất. Vì vậy **tối đa 2 đợt**, mỗi đợt gửi mọi lệnh gọi song song trong **một** tin nhắn:
+  1. **Đợt 1:** 1 lệnh `detailed` cho từ khóa lõi mạnh nhất + `concise` cho **toàn bộ** ứng viên đã qua 3a (thường 15–25 cụm), gồm cả cụm phụ, từ đồng nghĩa và tag người nhận/dịp mua. Liệt kê đủ ứng viên ngay từ đầu, đừng tra dần.
+  2. **Đợt 2:** chỉ tra các cụm **mới** lấy từ `related_keywords` và tag của `top_listings` ở lệnh `detailed`, sau khi đã lọc qua 3a.
+- Khi cần thay một tag (quá 20 ký tự, lặp…), lấy cụm thay thế **trong số đã tra**. Chỉ mở thêm đợt 3 khi không còn cụm hợp lệ nào đã tra.
+- **Lọc trước khi tra:** bỏ cụm dài hơn 20 ký tự (trừ ứng viên chỉ dùng cho tiêu đề) và cụm trùng ý với cụm đã có trong danh sách.
+- Ở lệnh `detailed`, chỉ đọc `related_keywords` và trường `tags` của `top_listings`. Không chép phần còn lại vào câu trả lời.
+
+**Cache (khi có công cụ chạy lệnh, ví dụ Claude Code):** dùng `scripts/ytrends_cache.py` trong thư mục skill.
+- Trước đợt 1, chạy `python3 <thư mục skill>/scripts/ytrends_cache.py get --ltype <ltype> "<cụm 1>" "<cụm 2>" ...`. Cụm nằm trong `hits` thì dùng số liệu cache, chỉ gọi YTrends cho các cụm trong `misses`.
+- Sau mỗi đợt, lưu kết quả bằng lệnh `put`: truyền vào stdin một list JSON gồm `keyword`, `ltype`, `total_listings`, `total_sellers`, `avg_conversion_rate`, `opportunity_score`, `pct_sold_in_window` (lấy từ `measured_demand`, có thể null), `competition_level`, `as_of_date`, `median_data_age_days`, `link`. Với từ khóa tra `detailed`, thêm `related`: list các tag liên quan.
+- Cache chỉ trả về mục được lưu **sau** lần YTrends làm mới gần nhất (mốc 15:00 UTC hằng ngày), nên số liệu giống hệt khi tra lại. Nếu một lần tra mới trả về `as_of_date` khác cache, chạy lại `get` với `--as-of <ngày mới>`.
+- Không có công cụ chạy lệnh (ví dụ Claude.ai): bỏ qua cache, vẫn tra theo đợt như trên.
+
+So sánh các chỉ số:
 
 | Chỉ số | Cách đọc |
 |---|---|
@@ -238,6 +254,11 @@ Mỗi phần phải có **2–3 phương án khác nhau thật sự về chiến
 - Bộ tag phải ăn khớp với tiêu đề tương ứng: cụm lõi của bộ tag phải có trong tiêu đề.
 - **Mỗi phương án đều phải đạt checklist ở mục 9.**
 
+**Chế độ gọn** (khi người dùng gõ "gọn", "nhanh" hoặc "quick"):
+- Mỗi phần đưa **2 phương án**: phương án ⭐ Đề xuất và 1 phương án có chiến lược khác nhất với nó.
+- Bảng số liệu chỉ gồm từ khóa của **tiêu đề và bộ tag ⭐ Đề xuất**. Từ khóa của phương án còn lại ghi số liệu ngay trong dòng lý do.
+- Mọi tag trong output vẫn phải được tra số liệu, và checklist ở mục 9 vẫn chạy đầy đủ. Chế độ gọn chỉ bớt số phương án, không bớt bước kiểm tra.
+
 **Nút copy:**
 - Mỗi phương án (một tiêu đề, một bộ tag, một mô tả) nằm trong **một khối code riêng** dạng ` ```text `, để ứng dụng Claude hiển thị nút Copy.
 - Bộ tag viết trên **một dòng**, ngăn cách bằng dấu phẩy.
@@ -267,7 +288,7 @@ Mỗi phần phải có **2–3 phương án khác nhau thật sự về chiến
 - [ ] Nếu có listing đối thủ: mọi cụm "Lấy" ở bước 3d đã có mặt trong ít nhất 1 phương án
 
 **Số liệu**
-- [ ] Mọi từ khóa trong mọi tiêu đề và bộ tag đều có dòng trong bảng số liệu (có số, "chưa đủ dữ liệu" hoặc "chưa tra được")
+- [ ] Mọi từ khóa trong mọi tiêu đề và bộ tag đều có dòng trong bảng số liệu (có số, "chưa đủ dữ liệu" hoặc "chưa tra được"). Ở chế độ gọn: dòng trong bảng hoặc số liệu trong dòng lý do
 - [ ] Mọi con số khớp với kết quả công cụ; không có số ước lượng hay số tự suy ra
 - [ ] Có ghi nguồn, ngày dữ liệu và câu lưu ý về giới hạn dữ liệu
 - [ ] Lý do của từng phương án dẫn số cụ thể
@@ -305,7 +326,7 @@ tag1, tag2, ..., tag13
 ### Bộ 3 – ...
 
 ## BẢNG SỐ LIỆU TỪ KHÓA
-Nguồn: YTrends · Ngày dữ liệu: <as_of_date> · Tuổi dữ liệu trung vị: <median_data_age_days> ngày · Mức "có bán" chung toàn sàn: ~<x>%
+Nguồn: YTrends · Ngày dữ liệu: <as_of_date> · Tuổi dữ liệu trung vị: <median_data_age_days> ngày · Mức "có bán" chung toàn sàn: ~<x>% · <n> từ khóa lấy từ cache (nếu có)
 
 | Từ khóa | Dùng ở | Listing | Shop | Chuyển đổi | Opp score | % có bán (ước tính) | Cạnh tranh | Nhận định |
 |---|---|---|---|---|---|---|---|---|

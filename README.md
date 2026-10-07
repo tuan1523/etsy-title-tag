@@ -40,11 +40,19 @@ Gõ `/etsy-title-tag` rồi gửi ảnh sản phẩm, hoặc nói tự nhiên, v
 
 Nên gửi kèm (nếu có): chất liệu, size, khả năng cá nhân hóa, thời gian xử lý, tiêu đề và tag của đối thủ. Skill **không tự bịa** những thông tin này.
 
+### Chạy nhanh hơn
+
+- Thêm chữ **"gọn"** (hoặc "nhanh", "quick") khi gọi skill: mỗi phần chỉ có 2 phương án và bảng số liệu ngắn hơn, nhưng vẫn tra số liệu và chạy checklist đầy đủ.
+- Bật **Fast mode** (`/fast`) trong Claude Code để Claude viết kết quả nhanh hơn, vẫn cùng model.
+- Làm nhiều mẫu cùng ngách trong ngày sẽ nhanh dần, vì số liệu YTrends được cache (xem bên dưới).
+
 ## Dữ liệu từ khóa (tùy chọn)
 
 Skill chạy được mà không cần dữ liệu ngoài. Khi đó nó chọn từ khóa theo nguyên tắc long-tail của Etsy.
 
 Nếu Claude có kết nối MCP của [YTrends](https://trends.ytuong.ai), skill sẽ dùng `ytrends_research_keyword` và `ytrends_trend_calendar` để chấm điểm từ khóa và dẫn số liệu. Số liệu YTrends là ước tính trên một phần dữ liệu Etsy, nên chỉ dùng để so sánh tương đối giữa các từ khóa.
+
+Để chạy nhanh, skill tra YTrends tối đa 2 đợt song song. Trong Claude Code, skill còn cache số liệu bằng [`scripts/ytrends_cache.py`](scripts/ytrends_cache.py) tại `~/.cache/etsy-title-tag/ytrends.json`. Cache chỉ dùng số liệu lưu sau lần YTrends làm mới gần nhất (15:00 UTC hằng ngày), nên kết quả giống hệt khi tra lại. Muốn đổi vị trí cache, đặt biến môi trường `ETSY_TITLE_TAG_CACHE`. Muốn xóa cache: `python3 ~/.claude/skills/etsy-title-tag/scripts/ytrends_cache.py clear`.
 
 ## Nguồn
 

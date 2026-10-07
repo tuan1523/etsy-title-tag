@@ -155,7 +155,7 @@ Mục đích: **lấy từ khóa tốt của đối thủ, không chép cách vi
 | Mô tả khách quan | chất liệu, kích thước, kỹ thuật, vintage | **Có**. Chất liệu và size chỉ khi người dùng cung cấp. Màu phôi: xem nguyên tắc 4 |
 | Dịp lễ, mùa | Halloween, Christmas, Fall | Theo bảng mùa vụ ở mục 2 |
 | Người nhận | gift for her, teacher gift | **Không**, đưa vào tag |
-| Từ cảm tính | perfect, beautiful, cute | **Không**, đưa vào description |
+| Từ cảm tính | perfect, beautiful, cute | **Không**, đưa vào description, tag hoặc attribute |
 | Thông tin bán hàng | sale, free shipping, % off | **Không**, xóa hẳn |
 | Từ hoặc cụm lặp | unisex adult poncho, unisex cotton poncho | **Không** |
 
@@ -375,14 +375,113 @@ Each sleeve tells its own story: a red rose vine with golden thorns on one side,
 For the romantasy reader, the book club friend, or the bookworm who never stops at one chapter – a gift any book lover will reach for all season.
 ```
 
-## Nguồn (tài liệu chính thức của Etsy)
+## Phụ lục – Rule chính thức của Etsy
 
-- New Guidance for Listing Titles, and a Tool to Help (27/04/2026): https://www.etsy.com/seller-handbook/article/1399426136697
-- Keywords 101: Everything You Need to Know (08/2025): https://www.etsy.com/seller-handbook/article/382774281517
-- How Etsy Search Works (08/2025): https://www.etsy.com/seller-handbook/article/375461474487
-- The Anatomy of a Well-Crafted Etsy Listing (08/2025): https://www.etsy.com/seller-handbook/article/1347574487014
-- Podcast Transcript: Etsy Search Mythbusting With Two Etsy Experts: https://www.etsy.com/seller-handbook/article/397558006917
-- Podcast Transcript: Insider's Guide to Etsy Search, Keywords Edition (25/08/2021): https://www.etsy.com/seller-handbook/article/1046872470801
-- Help Center – How to Use Tags to Get Found in Search: https://help.etsy.com/hc/en-us/articles/360000336307
-- Help Center – How to Create a Listing: https://help.etsy.com/hc/en-us/articles/115015628707
-- Help Center – Search Engine Optimization (SEO) for Shop and Listing Pages: https://help.etsy.com/hc/en-us/articles/115015663987
+Tóm tắt (diễn đạt lại, không trích nguyên văn) từ 9 tài liệu chính thức của Etsy, đọc lại ngày 08/10/2026. Mỗi rule có mã nguồn trong ngoặc vuông. Khi rule ở các mục trên mâu thuẫn với phụ lục này, phụ lục thắng (nguyên tắc 1).
+
+**Mã nguồn**
+
+| Mã | Tài liệu | Ngày cập nhật |
+|---|---|---|
+| [TG] | Seller Handbook – New Guidance for Listing Titles, and a Tool to Help | 27/04/2026 |
+| [KW] | Seller Handbook – Keywords 101: Everything You Need to Know | 26/08/2025 |
+| [SW] | Seller Handbook – How Etsy Search Works | 26/08/2025 |
+| [AN] | Seller Handbook – The Anatomy of a Well-Crafted Etsy Listing | 26/08/2025 |
+| [MB] | Seller Handbook – Podcast: Etsy Search Mythbusting With Two Etsy Experts | phát hành 10/2018 |
+| [IG] | Seller Handbook – Podcast: Insider's Guide to Etsy Search, Keywords Edition | 25/08/2021 |
+| [HT] | Help Center – How to Use Tags to Get Found in Search | – |
+| [HL] | Help Center – How to Create a Listing | – |
+| [HS] | Help Center – Search Engine Optimization (SEO) for Shop and Listing Pages | – |
+
+Hai podcast [MB] và [IG] đã cũ. Khi chúng khác với tài liệu mới hơn ([TG], [KW], [SW], [AN]), theo tài liệu mới hơn.
+
+### A. Etsy Search hoạt động thế nào
+1. Search có 2 pha: **query matching** (gom listing có từ khóa khớp truy vấn) và **ranking** (xếp hạng các listing đã gom). [SW] [IG]
+2. Khi matching, Etsy xem listing một cách tổng thể: title, tag, attribute, description, ảnh đầu tiên, review… Tiêu đề không phải gánh hết mọi từ khóa. [TG] [KW] [SW]
+3. Trước đây search đặt nặng tiêu đề nên nhiều seller nhồi từ khóa. Search hiện đã thay đổi, tiêu đề vẫn quan trọng (ảnh hưởng cả search lẫn chuyển đổi) nhưng nên tập trung vào rõ ràng và đúng trọng tâm. [TG]
+4. **Relevancy:** khi title, tag, description, category, attribute khớp truy vấn, listing có thể xuất hiện. Từ khóa khớp **chính xác** với truy vấn có thể được xếp cao hơn. [SW]
+5. **Thứ tự từ trong một cụm có ý nghĩa:** "shirt dress" và "dress shirt" cho kết quả khác nhau. Tag "shirt dress" vẫn có thể xuất hiện khi khách gõ "dress shirt", nhưng xếp cao hơn khi khách gõ đúng "shirt dress". [IG]
+6. **Vị trí cụm từ trong tiêu đề không ảnh hưởng thứ hạng.** Thứ tự tag cũng không ảnh hưởng. Đầu tiêu đề chỉ quan trọng vì đó là phần người mua nhìn thấy trước, nên ảnh hưởng chuyển đổi. [KW] [MB]
+7. **Không bắt buộc** một từ khóa phải có ở cả title và tag mới được match. Nhưng nên đặt **từ khóa mạnh nhất** ở cả hai nơi, vì khi khớp truy vấn có thể tăng độ liên quan. [MB]
+8. **Yếu tố xếp hạng khác:** chất lượng shop (có shop icon…), chất lượng listing (nhiều ảnh chất lượng cao, có chính sách đổi trả), giá ship (với seller Mỹ), chất lượng chăm sóc khách hàng (điểm review trung bình, tỷ lệ trả lời tin nhắn, tỷ lệ case trong 3 tháng gần nhất). [SW]
+9. **Tỷ lệ tương tác / chuyển đổi:** listing được người xem mua nhiều sẽ được xếp cao hơn. [SW] [MB]
+10. **Listing mới** được đẩy nhẹ, tạm thời, vài giờ đến vài ngày để Etsy thu thập dữ liệu. Listing renew được đẩy nhẹ hơn. Renew hoặc đăng lại chỉ để lấy cú đẩy này **không phải** chiến lược hiệu quả. Nên dồn sức vào tag và tỷ lệ chuyển đổi. [SW] [MB]
+11. Etsy cá nhân hóa kết quả theo thói quen người mua (Context Specific Ranking). Tự search listing của mình để đo thứ hạng không chính xác, hãy xem Shop Stats. [SW]
+12. Etsy Plus, Star Seller và Etsy Ads **không** ảnh hưởng thứ hạng search tự nhiên. Star Seller chỉ là tín hiệu tin cậy, có thể tăng chuyển đổi. [SW] [MB]
+13. Số lượng ảnh **không** trực tiếp ảnh hưởng thứ hạng, nhưng nhiều ảnh giúp chuyển đổi nên ảnh hưởng gián tiếp. [MB]
+14. Vacation mode không bị phạt. Listing chỉ bị rút khỏi search tạm thời, các listing khác tiếp tục có tương tác trong lúc đó. [SW] [MB]
+15. Listing mới có thể mất **tới 48 giờ** mới xuất hiện trong search và category. [HL]
+16. Listing mới vẫn hiện trong search dù chưa có review, miễn là không có vấn đề chất lượng khác. [AN]
+17. Thay đổi từ khóa cần thời gian mới có tác dụng. Không sửa quá thường xuyên. Cho mỗi lần sửa đủ thời gian thu thập dữ liệu, xem traffic vài tháng một lần. [TG] [IG]
+
+### B. Title
+1. Giới hạn **140 ký tự**. [HL]
+2. Nói rõ **món hàng là gì** (ví dụ "mug", "dress"), chỉ **1 lần**. [TG] [HL]
+3. Đưa **đặc điểm quan trọng nhất lên trước**: màu, chất liệu, kích thước. Thêm thông tin khác làm món hàng khác biệt. [TG]
+4. Ngắn gọn, dễ quét: cân nhắc **dưới 15 từ**. [TG] [HL] [HS]
+5. Dịp lễ, dịp đặc biệt, người nhận **chỉ** đưa vào khi là bản chất món hàng (ví dụ "birthday candle", "Halloween costume"). [TG] [HL]
+6. Từ chủ quan ("perfect", "beautiful"): bỏ khỏi tiêu đề. Danh sách hướng dẫn nói chuyển vào description, bảng hướng dẫn nói chuyển vào tag hoặc attribute. [TG] [AN]
+7. Cố gắng **không lặp từ**, bỏ cụm lặp (ví dụ "unisex adult poncho, unisex cotton poncho"). [TG]
+8. Không ghi giá, ship, khuyến mãi ("on sale", "free shipping"). Etsy tự gắn badge trong search. [TG] [HL]
+9. Cụm quà tặng / khát vọng ("gift for him", "personalized gift"): **không** đưa vào tiêu đề. [TG]
+10. Bảng giữ/bỏ chính thức: danh từ → giữ 1 lần; mô tả khách quan (màu, chất liệu, size, vintage) → giữ; dịp lễ → đôi khi; cụm quà tặng → không; từ chủ quan → không; cách bán hàng → xóa hẳn; cụm lặp → không. [TG]
+11. Viết cho **người mua, không cho máy**. Danh sách dài từ khóa làm người mua bối rối hoặc bỏ đi. [KW] [IG]
+12. Người mua chỉ thấy **vài từ đầu** của tiêu đề trên trang kết quả, nhất là trên điện thoại. Dùng vài từ đầu để nói món hàng là gì. [KW] [AN]
+13. Được dùng dấu câu và một số ký hiệu để tách cụm. Etsy vẫn đọc từng cụm. Etsy gợi ý dùng **dấu phẩy**. [KW] [IG]
+14. Số cụm trong tiêu đề: 2–3 cụm thật liên quan [IG]; 3–4 cụm mô tả [MB]. Phần còn lại đưa vào tag.
+15. Mô tả phải đúng sự thật. Etsy cấm trình bày gây hiểu lầm, kể cả gắn nhãn sai (ví dụ ghi "cashmere" khi không phải cashmere). [KW] [SW]
+16. **Google:** tiêu đề listing thành page title. Google chỉ hiện **50–60 ký tự đầu**, nên đặt đặc điểm quan trọng nhất lên đầu. Tiêu đề phải tự nhiên, đọc trên Google là hiểu ngay. [HS]
+17. **URL** tạo từ tiêu đề lúc publish lần đầu và không đổi khi sửa tiêu đề. Nếu thay đổi listing lớn, cân nhắc tạo listing mới. URL ít ảnh hưởng SEO hơn tiêu đề. [HL] [HS]
+18. Ví dụ trước → sau của Etsy:
+    - "Dad T-Shirt | Father Shirt | Personalized Father's Day Gift | …" → "Personalized 100% Cotton Dad T-Shirt: Custom Kids' Names S-XL"
+    - "Moonstone Ring Mini Ring Solid Gold Perfect For Women's Wedding …" → "Celestial Blue Moonstone Ring, 9k Solid Gold Band"
+    - "ON SALE ! Birthday Bandana - Happy Birthday, Birthday Dog Bandana …" → "Birthday Bones Cotton Dog Bandana - Easy Slip Over the Collar" [TG] [KW]
+19. Công cụ AI gợi ý tiêu đề của Etsy (listing tiếng Anh, trong search visibility dashboard) là **gợi ý tùy chọn**. Thấy gợi ý không có nghĩa tiêu đề hiện tại kém. Nên tải CSV listing trước khi sửa để giữ lại từ khóa cũ cho tag/description/attribute. [TG]
+
+### C. Tag
+1. Tối đa **13 tag**, mỗi tag tối đa **20 ký tự**. [HT] [HL] Nên dùng **đủ 13**: tag bỏ trống hoặc không liên quan là bỏ lỡ cơ hội. [KW] [AN]
+2. Ký tự cho phép: chữ, số, dấu cách, chữ có dấu (À, é, ñ, ü…). Được dùng `'` và `-` trong từ, nhưng không được bắt đầu tag bằng hai ký tự này. [HT]
+3. Dùng **cụm nhiều từ**, ngôn ngữ tự nhiên. "custom bracelet" tốt hơn 2 tag "custom" và "bracelet". Người mua hiếm khi gõ 1 từ. [KW] [AN] [IG] [MB]
+4. Mẹo: không tưởng tượng được ai gõ cụm đó vào Google thì không dùng làm tag. [AN]
+5. Tag phải **chính xác, liên quan**, và **đa dạng**. Tag hữu ích khi không có attribute khớp, và rất hợp cho cụm khát vọng / quà tặng (ví dụ "gift for her"). [HT]
+6. **Long-tail:** ưu tiên cụm cụ thể ("canvas tote bag", "natural diamond ring") thay vì cụm chung ("tote bag"). Ít lượt tìm hơn nhưng chuyển đổi tốt hơn. [KW] [IG]
+7. **Không lặp tag.** "octopus art print" + "animal wall decor" tốt hơn "octopus art" + "octopus print"; "kids' art print" + "nursery wall decor" tốt hơn "nursery art" + "nursery print". Etsy ghép từ giữa các tag, nên vẫn match được truy vấn gộp. [KW] [IG]
+8. Lặp **một từ** giữa hai cụm khác nhau vẫn ổn nếu cả hai đều là cụm người mua hay gõ (ví dụ "leather tote bag" và "large leather purse"). [IG]
+9. **Không lặp category / attribute nguyên văn.** Category và attribute hoạt động như tag. Lặp lại là phí tag. Vẫn được dùng trong cụm dài hơn (ví dụ attribute "faux fur" → tag "faux fur accent rug"). [KW] [AN] [IG] [MB]
+10. **Không cố viết sai chính tả.** Etsy tự sửa lỗi gõ của người mua. [KW] [IG]
+11. **Không lo số ít/số nhiều.** Etsy match theo gốc từ ("diary"/"diaries", "shelf"/"shelves", "woman"/"women"). [KW] [IG]
+12. **Không trộn ngôn ngữ.** Title và tag viết bằng ngôn ngữ shop, Etsy tự dịch. Chỉ tự dịch nếu thông thạo, khi đó dịch cả title và tag. [KW] [SW] [IG]
+13. **Từ đồng nghĩa và cách gọi theo vùng:** Etsy tự xử lý chính tả vùng (jewellery/jewelry) nhưng **không** xử lý từ khác vùng ("thong sandals" / flip flops, "jumper" / sweater). Hãy thêm nếu khách ở vùng đó. [KW] [IG]
+14. Cụm dài hơn 20 ký tự: tách thành nhiều cụm có nghĩa ("minimalist diamond engagement rings" → "minimalist jewelry", "diamond ring", "engagement ring"), không tách thành từ đơn. [KW] [IG]
+15. Các loại tag nên có: mô tả, chất liệu và kỹ thuật (có "personalized"/"custom" nếu bán hàng cá nhân hóa), người nhận, dịp mua, giải pháp / nhu cầu, phong cách (thời kỳ, bảng màu, thẩm mỹ + danh từ sản phẩm, ví dụ "art deco lamp"), kích thước / hình dáng. [KW] [AN]
+16. Nguồn ý tưởng từ khóa: gợi ý tự động trong ô search Etsy, Shop Stats (từ khóa khách đã dùng), review của khách (chi tiết họ khen, vấn đề sản phẩm giải quyết), description dài của chính mình, báo cáo Marketplace Insights. [SW] [IG] [MB]
+17. Tag theo dịp nên thêm **sớm** trước mùa (ví dụ thêm "gift for mom" từ tháng 2 cho Mother's Day, để kịp cả thị trường Anh tháng 3). [IG]
+18. Khi copy listing, phải sửa title và tag cho đúng sản phẩm mới, không để tag của mẫu cũ. [IG]
+19. Xem Shop Stats, đổi tag ở listing ít traffic, lấy từ khóa từ listing bán tốt. [KW] [SW] [IG]
+
+### D. Category & Attribute
+1. Chọn **subcategory cụ thể nhất**. Listing tự xuất hiện ở mọi category cha, nên mở rộng chứ không thu hẹp phạm vi. [KW] [MB]
+2. Category và attribute hoạt động như tag, và attribute còn là **bộ lọc** khi người mua lọc kết quả. [KW] [IG]
+3. Thêm **mọi attribute đúng**, kể cả khi kém chính xác hơn cách mình gọi ("magenta" → chọn Pink; "nature inspired" → chọn Plants & trees). [KW] [AN]
+4. Attribute **Holiday/Occasion** chỉ dùng cho món làm riêng cho dịp đó (vớ Christmas, khăn in cây thông). Món chỉ "hợp làm quà" dịp đó thì dùng tag. [KW] [IG]
+
+### E. Description
+1. Etsy search có xét từ khóa trong description khi xếp hạng. [KW] [AN]
+2. Đưa từ khóa liên quan vào **vài câu đầu**. Viết 1–2 câu tự nhiên, đúng giọng thương hiệu. [KW] [AN]
+3. **Không chép nguyên tiêu đề**, không liệt kê từ khóa, không lặp một cụm nhiều lần. [KW] [AN] [HS]
+4. **Câu đầu** phải cho người đọc biết chính xác đang bán gì. [HS]
+5. Thông tin cốt lõi lên đầu (size, kích thước, màu, cách đặt hàng), kết thúc bằng câu chuyện sản phẩm. [AN]
+6. Ghi chi tiết: kích thước, chất liệu, bảo quản, tùy chọn cá nhân hóa, các biến thể bán. Trả lời câu hỏi người mua sẽ hỏi. [AN] [HS]
+7. Kể chuyện: cảm hứng hoặc quy trình làm. [AN]
+8. Dùng **bullet hoặc đoạn ngắn**. Tránh khối chữ dài. [AN]
+
+### F. Ảnh, video và các phần khác
+1. Tối đa **20 ảnh** và **2 video** (5–15 giây) mỗi listing. [HL] [AN]
+2. Ảnh đầu tiên: tránh chữ chèn lên ảnh, collage, ghép nhiều ảnh. Tối thiểu **635 px** mỗi chiều để không bị xếp thấp; khuyên dùng **2000 px** trở lên. [AN]
+3. Nhiều góc, cận cảnh chi tiết, ảnh đang dùng (lifestyle), ánh sáng tự nhiên, nền đơn giản. [AN]
+4. Thêm **alt text** cho từng ảnh, mô tả chính xác nội dung (màu, chất liệu, texture). Giúp SEO Google Images. [HS]
+5. Giá: ship cao là một trong 10 rào cản mua hàng hàng đầu. Chuyển bớt phí ship vào giá sản phẩm (tổng không đổi) có thể tăng doanh số. [AN]
+6. Có chính sách shop (đổi trả…) giúp thứ hạng; dùng template chính sách của Etsy có lợi thêm. [AN] [SW]
+7. Thời gian xử lý phải thực tế và chính xác. [AN] [HL]
+8. Personalization: có thể đặt hướng dẫn, giới hạn số ký tự, chọn bắt buộc hay tùy chọn. [HL]
+9. **Google SEO cho shop:** tagline tối đa 55 ký tự, mô tả ngắn shop bán gì; mục About kể kinh nghiệm và quy trình (tối đa 5 ảnh + 1 video); điền đủ chính sách shop. Có thể dẫn link từ website/mạng xã hội về shop, nhưng **không mua backlink**. [HS] [AN]

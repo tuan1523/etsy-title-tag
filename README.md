@@ -48,7 +48,7 @@ Nếu Claude có kết nối MCP của [YTrends](https://trends.ytuong.ai), skil
 
 ## Nguồn
 
-Toàn bộ rule dựa trên tài liệu chính thức của Etsy, danh sách link ở cuối [SKILL.md](SKILL.md).
+Toàn bộ rule dựa trên 9 tài liệu chính thức của Etsy (Seller Handbook và Help Center). Nội dung đã được tóm tắt thành mục **Phụ lục – Rule chính thức của Etsy** ở cuối [SKILL.md](SKILL.md), mỗi rule có mã nguồn, nên skill không cần mở link khi chạy.
 
 ## Đóng góp
 
